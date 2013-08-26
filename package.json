@@ -1,0 +1,25 @@
+{
+    "author": "In-Touch Insight Systems Inc.",
+    "name": "signatural",
+    "description": "Natural Signature Library",
+    "version": "1.0.0",
+    "homepage": "http://www.intouchinsight.com",
+    "repository": {
+        "type": "git",
+        "url": "git@git.assembla.com:edc/signatural.git"
+    },
+    "engines": {
+        "node": "0.8 || 0.9 || 0.10"
+    },
+    "scripts": {
+        "start": "grunt"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "grunt-contrib-uglify": "~0.2.0",
+        "grunt-contrib-concat": "~0.3.0",
+        "grunt-contrib-jshint": "~1.1.0",
+        "grunt-express": "~0.3.2",
+        "grunt-contrib-copy": "~0.4.1"
+    }
+}

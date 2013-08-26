@@ -1,0 +1,28 @@
+var wrapper = document.getElementById("signature-pad"),
+    clearButton = wrapper.querySelector("[data-action=clear]"),
+    saveButton = wrapper.querySelector("[data-action=save]"),
+    canvas = wrapper.querySelector("canvas"),
+    signature;
+
+// Adjust canvas coordinate space taking into account pixel ratio,
+// to make it look crisp on mobile devices.
+// This also causes canvas to be cleared.
+function resizeCanvas() {
+    var ratio =  window.devicePixelRatio || 1;
+    canvas.width = canvas.offsetWidth * ratio;
+    canvas.height = canvas.offsetHeight * ratio;
+    canvas.getContext("2d").scale(ratio, ratio);
+}
+
+window.onresize = resizeCanvas;
+resizeCanvas();
+
+signature = new Signatural({canvas: canvas, mode: "both", color: "blue"});
+
+clearButton.addEventListener("click", function (event) {
+    signature.clear();
+});
+
+saveButton.addEventListener("click", function (event) {
+    window.open(signature.toDataURL());
+});
