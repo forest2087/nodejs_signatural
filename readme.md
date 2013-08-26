@@ -14,6 +14,7 @@ In order to build Signatural, you'll need to have the following installed locall
 
 From the root of the project, run:
 
+    npm install
     grunt build
 
 The libraries will end up in `build/public/assets/js`.
