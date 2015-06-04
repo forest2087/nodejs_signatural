@@ -12,7 +12,8 @@
     "node": "0.10 || 0.12"
   },
   "scripts": {
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "preinstall": "npm prune"
   },
   "dependencies": {
     "gulp-concat": "^2.5.2"

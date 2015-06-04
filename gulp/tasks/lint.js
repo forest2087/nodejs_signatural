@@ -6,8 +6,7 @@ Task.name = __filename.split('/').pop().slice(0, -3).replace(/(\.)/g, ':');
 
 
 Task.run = function (gulp) {
-    var jshint = require("gulp-jshint"),
-        map = require("map-stream");
+    var jshint = require("gulp-jshint");
 
     return gulp.src('./src/*.js')
         .pipe(jshint())
