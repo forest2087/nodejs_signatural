@@ -15,14 +15,14 @@ In order to build Signatural, you'll need to have the following installed locall
 From the root of the project, run:
 
     npm install
-    grunt build
+    gulp build
 
-The libraries will end up in `build/public/assets/js`.
+The libraries will end up in `dist`.
 
 ### Local Testing
 
 If you want to quickly test Signatural, run:
 
-    grunt server
+    gulp serve
 
-Then point your browser at `http://localhost:3333` and you'll get the test panel.
+Then point your browser at `http://localhost:3000` and you'll get the test panel.
