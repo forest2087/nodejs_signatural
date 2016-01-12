@@ -47,9 +47,13 @@ Signatural.prototype.toDataURL = function ( imageType, quality ) {
 };
 
 Signatural.prototype.fromDataURL = function ( dataUrl ) {
-    var image = new Image();
+    var image = new Image(),
+        ratio = window.devicePixelRatio || 1,
+        width = this._canvas.width / ratio,
+        height = this._canvas.height / ratio;
+
     image.src = dataUrl;
-    this._context.drawImage( image, 0, 0, this._canvas.width, this._canvas.height );
+    this._context.drawImage( image, 0, 0, width, height );
 };
 
 Signatural.prototype._reset = function () {
